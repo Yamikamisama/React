@@ -1,5 +1,7 @@
 # Comment Maker
 
+![](comments.png)
+
 This was a tutorial that Facebook gives to get started with React, If you would like to play with the comment box you will need to run it on a server.
 
 #####Clone the repo
