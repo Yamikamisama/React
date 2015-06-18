@@ -12,14 +12,16 @@
   <script type="text/jsx">
   	/** @jsx React.DOM */
 
-  	var MessageBox = React.createclass({
+  	var MessageBox = React.createClass({
   		render: function(){
   			return(
   				<h1>Hello, world</h1>
   			);
   		}
   	});
-
+  	React.render(<MessageBox />, document.getElementById('app'), function(){
+  		console.log('after render is finished');
+  	})
   </script>
 
 </body>
