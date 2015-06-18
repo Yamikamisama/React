@@ -26,7 +26,11 @@
 
   var MessageBoxDOM = React.createClass({
     render: function(){
-      return React.DOM.h1(null, 'Hello, World');
+      return React.DOM.div(
+        { className: 'container'},
+        React.DOM.h1(null, 'Hello, World'),
+        SubMessage(null)
+      );
     }
   });
 
@@ -39,12 +43,13 @@
   });
 
   var reactComponentJSX = React.render(
-    <MessageBox />, document.getElementById(jsx)
+    <MessageBoxJSX />,
+    document.getElementById('jsx')
   );
 
   var reactComponentDOM = React.render(
     MessageBoxDOM(null),
-    document.getElementById('dom');
+    document.getElementById('dom')
   );
   </script>
 
