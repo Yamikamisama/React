@@ -15,7 +15,16 @@
 
     var MessageBox = React.createClass({
 
-      getInitialState: function(){
+      // when extracting values from the DOM use refs to get the data
+      handleAdd: function(e){
+        var newMessage = this.refs.newMessage.getDOMNode().value;
+        var newMessages = this.state.messages.concat([newMessage]);
+        this.setState({
+          messages: newMessages
+        });
+      },
+
+      getInitialState: function(e){
         return{
           isVisible: true,
           messages: [
@@ -24,13 +33,11 @@
                     'My spoon is too big',
                     'Tuesday is coming. Did you bring your coat?',
                     'I am a banana'
-                   ]
+                    ]
         }
       },
 
-
       render: function(){
-
         var inlineStyles={
           display: this.state.isVisible ? 'block' : 'none'
         };
@@ -41,6 +48,8 @@
         return(
           <div className="container jumbotron" style={inlineStyles}>
             <h2>Hello World</h2>
+            <input ref="newMessage" type="text" />
+            <button className="btn btn-primary" onClick={this.handleAdd}>Add</button>
             {messages}
           </div>
         );
