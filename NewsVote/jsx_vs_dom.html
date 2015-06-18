@@ -13,7 +13,7 @@
 
   <script type="text/jsx">
   /** @jsx React.DOM */
-  var MessageBox = React.createClass({
+  var MessageBoxJSX = React.createClass({
     render: function(){
       return(
         <div className="container">
@@ -24,16 +24,27 @@
     }
   });
 
+  var MessageBoxDOM = React.createClass({
+    render: function(){
+      return React.DOM.h1(null, 'Hello, World');
+    }
+  });
+
   var SubMessage = React.createClass({
     render: function(){
       return(
         <small>Its good to see you</small>
       );
     }
-  })
+  });
 
   var reactComponentJSX = React.render(
     <MessageBox />, document.getElementById(jsx)
+  );
+
+  var reactComponentDOM = React.render(
+    MessageBoxDOM(null),
+    document.getElementById('dom');
   );
   </script>
 
