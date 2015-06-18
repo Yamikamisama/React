@@ -12,7 +12,29 @@
   <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
 
   <script type="text/jsx">
-  	/** @jsx React.DOM */
+  /** @jsx React.DOM */
+  var MessageBox = React.createClass({
+    render: function(){
+      return(
+        <div className="container">
+          <h1>Hello, World</h1>
+          <SubMessage />
+        </div>
+      );
+    }
+  });
+
+  var SubMessage = React.createClass({
+    render: function(){
+      return(
+        <small>Its good to see you</small>
+      );
+    }
+  })
+
+  var reactComponentJSX = React.render(
+    <MessageBox />, document.getElementById(jsx)
+  );
   </script>
 
 </body>
