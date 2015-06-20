@@ -1,4 +1,9 @@
+////////////////////////////////
+///   CommentBox Component   /// 
+////////////////////////////////
 var CommentBox = React.createClass({
+
+  //  Ajax call to load the comments from the server (JSON file)
   loadCommentsFromServer: function(){
     $.ajax({
       url: this.props.url,
@@ -12,6 +17,8 @@ var CommentBox = React.createClass({
       }.bind(this)
     });
   },
+
+  //  Event Listener for when the comments are submitted
   handleCommentSubmit: function(comment){
     var comments = this.state.data;
     var newComments = comments.concat([comment]);
