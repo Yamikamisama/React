@@ -14,14 +14,17 @@
     /** @jsx React.DOM */
     var Dashboard = React.createClass({
 
+      // Grabs data from Firebase and returns a JSON object
       loadData: function(){
         return $.get('https://gsr-demo.firebaseio-demo.com/' + this.props.url + '/.json')
       },
 
+      // Will mount will fire anything off before the component is actually mounted to the DOM
       componentWillMount: function(){
 
       },
 
+      // DidMount will fire something off after the component does mount
       componentDidMount: function(){
         this.loadData().then(function(data){
           this.setState({
@@ -30,12 +33,14 @@
         }.bind(this));
       },
 
+      // This sets the initialState of the component
       getInitialState: function (){
         return{
           metric: 0
         }
       },
 
+      // This renders the component and any elements of the comp that are sent along
       render: function(){
         return(
           <div className="jumbotron">
@@ -46,6 +51,7 @@
 
     })
 
+  // This actually renders the Component to the page.
   var DashboardComponent = React.render(
     <Dashboard url="metric"/>,
     document.getElementById('app')
