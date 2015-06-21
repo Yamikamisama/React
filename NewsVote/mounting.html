@@ -15,8 +15,8 @@
     var Dashboard = React.createClass({
 
       // Grabs data from Firebase and returns a JSON object
-      loadData: function(){
-        return $.get('https://gsr-demo.firebaseio-demo.com/' + this.props.url + '/.json')
+      loadData: function(url){
+        return $.get('https://gsr-demo.firebaseio-demo.com/' + url + '/.json')
       },
 
       // Will mount will fire anything off before the component is actually mounted to the DOM
@@ -26,17 +26,29 @@
 
       // DidMount will fire something off after the component does mount
       componentDidMount: function(){
-        this.loadData().then(function(data){
+        this.loadData(this.props.url).then(function(data){
           this.setState({
             metric: data
           });
         }.bind(this));
       },
 
+      componentWillReceiveProps: function(nextProps){
+        var lastUrl = this.props.url
+        this.loadData(nextProps.url).then(function(data){
+          this.setState({
+            lastRoute: lastUrl,
+            metric: data
+          });
+          console.log(data);
+        }.bind(this));
+      },
+
       // This sets the initialState of the component
       getInitialState: function (){
         return{
-          metric: 0
+          metric: 0,
+          lastRoute: ""
         }
       },
 
@@ -44,6 +56,7 @@
       render: function(){
         return(
           <div className="jumbotron">
+            {this.state.lastRoute}
             <h2>{this.state.metric}</h2>
           </div>
         );
@@ -52,7 +65,7 @@
     })
 
   // This actually renders the Component to the page.
-  var DashboardComponent = React.render(
+  var dashboardComponent = React.render(
     <Dashboard url="metric"/>,
     document.getElementById('app')
   );
