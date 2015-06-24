@@ -33,7 +33,7 @@ h1{
 	line-height: 190px;
 	border: 6px solid black;
 }
-.card:hover{
+.card-active{
 	border: 6px solid yellow;
 }
 
