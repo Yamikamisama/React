@@ -72,7 +72,7 @@ h1{
 /*   error Handlers   */
 /**********************/
 .win, .loose, .error, .success{
-	display: none;
+	/*display: none;*/
 	position: fixed;
 	top: 30%;
 	left: 20%;
@@ -81,24 +81,24 @@ h1{
 	padding: 0 5%;
 }
 .win{
-	color: rgb(38, 46, 94);
-	background-color: rgba(96, 109, 188, 0.83);
-	border: 4px solid rgb(38, 46, 94);
+	color: rgb(86, 38, 94);
+	background-color: rgba(167, 96, 188, 0.9);
+	border: 4px solid rgb(86, 38, 94);
 }
 
 .loose{
 	color: #4E4E4E;
-  background-color: rgba(0, 0, 0, 0.76);
+  background-color: rgba(0, 0, 0, 0.9);
   border: 4px solid #4E4E4E;
 }
 .error{
-	color: rgb(255, 0, 0);
-  background-color: rgba(203, 80, 80, 0.83);
-  border: 4px solid rgb(255, 65, 65);
+	color: rgb(149, 0, 0);
+	background-color: rgba(203, 80, 80, 0.9);
+	border: 4px solid rgb(149, 0, 0);
 }
 .success{
 	color: rgb(38, 94, 69);
-	background-color: rgba(96, 188, 102, 0.83);
+	background-color: rgba(96, 188, 102, 0.9);
 	border: 4px solid rgb(38, 94, 69);
 }
 @media only screen and (max-width: 570px) {
