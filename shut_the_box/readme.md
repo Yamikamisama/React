@@ -8,7 +8,7 @@ To play the game click here: [PLAY SHUT THE BOX](http://yamikamisama.github.io/p
 
 ####Version 1 - Basic
 
-This is simple HTML, CSS, and JS.  This iteration was simply to get the game up and running, basically the tinker stage.  The Javascript is a series of event listeners that create interactive an UI.  I thought about using Alerts for communication, but decided against that (mostly a design choice) and went with <div>s that display different messages to the user.
+This is simple HTML, CSS, and JS.  This iteration was simply to get the game up and running, basically the tinker stage.  The Javascript is a series of event listeners that create an interactive UI.  I thought about using Alerts for communication, but decided against that (mostly a design choice) and went with <div>s that display different messages to the user.
 
 My Thoughts: overall fun first iteration, needs to be refactored and should be modularized.
 
