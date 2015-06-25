@@ -34,7 +34,6 @@ $(document).ready(function() {
   		$('.card-active').removeClass('card-active').remove();
   	  if ( $('.card').length === 0 ) {
   			messageDisplay('.win');
-  			location.reload();
   		} else {
   			messageDisplay('.success');
   		}
