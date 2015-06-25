@@ -28,7 +28,19 @@ $(document).ready(function() {
   	var total = holder.reduce(function(a, b) {
   		return a + b;
   	});
-  	if (total % dieTotal === 0){ $('.card-active').removeClass('card-active').hide();}
+
+  	// Removes cards and displays error handling
+  	if (total % dieTotal === 0){
+  		$('.card-active').removeClass('card-active').remove();
+  	  if ( $('.card').length === 0 ) {
+  			messageDisplay('.win');
+  			location.reload();
+  		} else {
+  			messageDisplay('.success');
+  		}
+  	} else {
+  		messageDisplay('.error')
+  	}
   });
 
   // Event Listener that will roll the Dice and display the
@@ -41,5 +53,24 @@ $(document).ready(function() {
   		dieTotal += randNum;
   	});
   });
+
+  // Event Listener that ends the game and reloads the page
+  $('#end-game').click(function() {
+	  $('.loose').fadeIn('slow', function() {
+	  	setTimeout(function(){
+	  		$('.loose').fadeOut('slow')
+	  		location.reload();
+	  	}, 2000)
+	  });
+  });
+
+  // Message Display Handler
+  var messageDisplay = function(className){
+  	$(className).fadeIn('slow', function() {
+	  	setTimeout(function(){
+	  		$(className).fadeOut('slow')
+	  	}, 2000)
+	  });
+  }
 });
 
