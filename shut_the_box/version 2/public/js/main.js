@@ -14,7 +14,7 @@ STB = {
 
   // Places HTML template
   placeTemplate: function(element){
-    $(element).append('<ul class="cards"><li class="card">1</li><li class="card">2</li><li class="card">3</li><li class="card">4</li><li class="card">5</li><li class="card">6</li><li class="card">7</li><li class="card">8</li><li class="card">9</li></ul><br><br><button id="end-turn" class="btn">End Turn</button><div class="dice-container"><div class="die"></div><div class="die"></div></div><button id="die-roll" class="btn">Roll</button><button id="end-game" class="btn">End Game</button><div class="win"><h1>Congrats you win!</h1></div><div class="loose"><h1>Sorry you loose :( The game will now reload</h1></div><div class="error"><h1>Incorrect selection, try again</h1></div><div class="success"><h1>Good Move! Keep Going</h1></div>')
+    $(element).append('<ul class="cards"><li class="card">1</li><li class="card">2</li><li class="card">3</li><li class="card">4</li><li class="card">5</li><li class="card">6</li><li class="card">7</li><li class="card">8</li><li class="card">9</li></ul><button id="end-turn" class="btn">End Turn</button><div class="dice-container"><div class="die"></div><div class="die"></div></div><button id="die-roll" class="btn">Roll</button><button id="end-game" class="btn">End Game</button><div class="win"><h1>Congrats you win!</h1></div><div class="loose"><h1>Sorry you loose :( The game will now reload</h1></div><div class="error"><h1>Incorrect selection, try again</h1></div><div class="success"><h1>Good Move! Keep Going</h1></div>')
   },
 
   // Rolls the dice and stores the sum of the roll
