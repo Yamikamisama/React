@@ -16,11 +16,17 @@ My Thoughts: overall fun first iteration, needs to be refactored and should be m
 
 Refactored to be a Module/Plugin that you can include into your code to add the game on any page, simply:
 
-Add the stylesheet to your head  `<link rel="stylesheet" type="text/css" href="css/main.css">`
+Add the stylesheet to your head
 
-Include the div anchor where you want it to show up on your page `<div id="stb-game"></div>`
+`<link rel="stylesheet" type="text/css" href="css/main.css">`
 
-Add the module after your jQuery lib (yes this does have a dependency on jQuery)`<script type="text/javascript" src="js/main.js"></script>`
+Include the div anchor where you want it to show up on your page
+
+`<div id="stb-game"></div>`
+
+Add the module after your jQuery lib (yes this does have a dependency on jQuery)
+
+`<script type="text/javascript" src="js/main.js"></script>`
 
 My Thoughts: Easier to read and understand the code, better use of single responsiblity functions, and Mobile Responsive.
 
