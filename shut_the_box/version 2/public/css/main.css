@@ -72,7 +72,7 @@ h1{
 /*   error Handlers   */
 /**********************/
 .win, .loose, .error, .success{
-	/*display: none;*/
+	display: none;
 	position: fixed;
 	top: 30%;
 	left: 20%;
