@@ -55,9 +55,9 @@ $(document).ready(function() {
 
   // Event Listener that ends the game and reloads the page
   $('#end-game').click(function() {
-	  $('.loose').fadeIn('slow', function() {
+	  $('.lose').fadeIn('slow', function() {
 	  	setTimeout(function(){
-	  		$('.loose').fadeOut('slow')
+	  		$('.lose').fadeOut('slow')
 	  		location.reload();
 	  	}, 2000)
 	  });
