@@ -29,8 +29,6 @@ $(document).ready(function() {
   		return a + b;
   	});
   	if (total % dieTotal === 0){ $('.card-active').removeClass('card-active').hide();}
-  	debugger
-
   });
 
   // Event Listener that will roll the Dice and display the
@@ -39,9 +37,8 @@ $(document).ready(function() {
   	dieTotal = 0;
   	$('.die').each(function(){
   		var randNum = (Math.floor(Math.random() * 6) + 1)
-  		var roll = $(this).html(randNum)
+  		var roll = $(this).html('<img src="imgs/dice/die_'+ randNum + '.png" alt="">')
   		dieTotal += randNum;
-  		debugger
   	});
   });
 });
